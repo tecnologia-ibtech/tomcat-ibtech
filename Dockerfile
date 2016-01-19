@@ -1,8 +1,10 @@
 FROM tomcat:7.0.64-jre8
 
-RUN echo "deb http://http.debian.net/debian jessie contrib" >> /etc/apt/sources.list && \
-    echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | debconf-set-selections && \
-    apt-get update && \
+RUN echo "deb http://http.debian.net/debian jessie contrib" >> /etc/apt/sources.list
+
+RUN echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | debconf-set-selections
+
+RUN apt-get update && \
     apt-get install -y libfreetype6 \
                        libfontconfig \
                        ttf-mscorefonts-installer && \
