@@ -4,7 +4,6 @@ RUN rm -rf /usr/local/tomcat/webapps/*
 
 COPY lib/* /usr/local/tomcat/lib/
 
-EXPOSE 8089
-EXPOSE 8090
+EXPOSE 8089 8090
 
 #TESTADO
